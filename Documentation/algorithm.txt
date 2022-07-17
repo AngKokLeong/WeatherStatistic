@@ -1,0 +1,528 @@
+Utility class
+====================================================
+
+GetDataFromARow(data, delimiter, position) : string
+	declare string vector
+	starting_position = 0
+	delimiter_position = position of the nearest delimiter
+	
+	while delimiter_position is not equal to (max number of string character)
+		insert data to vector using substring of data from starting_position to (delimiter position - starting position)
+		starting_position = increment value by 1 of delimiter_position
+		delimiter_position = find nearest delimiter of data using delimiter from new delimiter_position
+		
+		if delimiter_position is equal to max number of string character
+			insert the string of the next delimiter into vector
+			
+	end while
+	
+	
+	iterate the vector 
+		check whether the element in vector if its empty
+			return the element at a specific position
+	
+	
+end function
+
+GetMonthInString (month) :string
+
+	declare a string vector
+	
+	insert "January" to vector
+	insert "February" to vector
+	insert "March" to vector
+	insert "April" to vector
+	insert "May" to vector
+	insert "June" to vector
+	insert "July" to vector
+	insert "August" to vector
+	insert "September" to vector
+	insert "October" to vector
+	insert "November" to vector
+	insert "December" to vector	
+	
+	iterate vector 
+		using the given month in numeric to search in the vector to return the text in month
+	
+end function
+===========================================================
+
+
+Weather class
+============================================================
+
+operator >> (input stream, Weather object): istream
+	
+	declare utility object
+	
+	string variable "data"
+
+	retrieve data from the input stream using delimiter '\n' and store into "data" variable
+
+	retreve wind_speed data from "data" string variable by specifying the position of the delimiter
+	retreve solar radiation data from "data" string variable by specifying the position of the delimiter
+	retreve temperature data from "data" string variable by specifying the position of the delimiter
+
+	if there are empty record with "N/A" set the particular data to 0.0
+
+	return input stream
+	
+end function
+===============================================================
+
+
+WindLogType class
+=============================================================
+operator>>(input stream, WindLogType object): (input stream) 
+
+	declare weather object
+	declare date object
+	declare time object
+
+	insert data to objects using >> operator in these order date object >> time object >> weather object
+	
+	Set date object in windLogType with the new date object
+	Set weather object in windLogType with the new weather object
+	Set time object in windLogType with the new time object
+	
+	
+	return input stream
+
+end function
+============================================================
+
+
+
+
+Time class
+================================================================
+
+operator>> (input stream, Time object):(input stream) 
+
+	declare string variable "data"
+
+	retrieve data from input stream with '\n' delimiter
+	
+	declare utility object
+
+	extract date and time data from the "data" variable 
+
+	convert the time data string to istringstream
+	extract the time data from the stream
+
+	declare the string vector
+
+	perform while loop to separate the hours and minutes in the string and push each data to vector
+
+	iterate each element in vector 
+		Set hour to the time object
+		Set Minutes to the time object
+	
+	reset the input stream for other class to use
+
+	return the input stream
+	
+end function
+
+
+operator== (const Time object) const : boolean
+	
+	compare the hours and minutes from both object
+	if matches
+		return true
+	else 
+		return false
+end function
+
+
+
+operator!= (const Time object) const: boolean
+
+	compare the hours and minutes from both object
+	if it does not match
+		return true
+	else 
+		return false
+		
+end function
+
+
+operator!= (const Time& t) const:boolean
+	compare the hours and minutes from both object
+	if it does not match
+		return true
+	else 
+		return false
+		
+end function
+
+
+operator<= (const Time& t) const:boolean
+	compare the hours and minutes from both object
+	if the time object is less than or equal to the other time object
+		return true
+	else 
+		return false
+		
+end function
+
+
+operator< (const Time& t) const:boolean
+	compare the hours and minutes from both object
+	if the time object is less than to the other time object
+		return true
+	else 
+		return false
+		
+end function
+
+
+operator>= (const Time& t) const:boolean
+	compare the hours and minutes from both object
+	if the time object is more than or equal to the other time object
+		return true
+	else 
+		return false
+		
+end function
+
+operator<= (const Time& t) const:boolean
+	compare the hours and minutes from both object
+	if the time object is less than or equal to the other time object
+		return true
+	else 
+		return false
+		
+end function
+
+
+operator> (const Time& t) const:boolean
+	compare the hours and minutes from both object
+	if the time object is more than to the other time object
+		return true
+	else 
+		return false
+		
+end function
+
+=============================================================
+
+
+Date class 
+=============================================================
+
+operator>> (input stream, Date object):(input stream) 
+
+	declare a string vector
+	declare string variable "data"
+
+	retrieve data from input stream with ' ' delimiter
+	
+	while loop
+		put each element delimited by '/' into vector
+	
+	iterate the string vector
+		set day in date object 
+		set month in date object
+		set year in date object
+		
+	return the input stream
+	
+end function
+
+
+operator= (Date object): Date object
+	reassign each member in date object to this date class
+	
+	return date object
+
+end function
+
+
+operator== (const Date object) const : boolean
+	
+	compare the day , month and year from both Date object
+	if matches
+		return true
+	else 
+		return false
+end function
+
+
+operator!= (const Date object) const : boolean
+	
+	compare the day , month and year from both Date object
+	if not matches
+		return true
+	else 
+		return false
+end function
+
+
+operator<= (const Date& t) const:boolean
+	compare the day, month and year from both Date object
+	if the Date object is less than or equal to the other Date object
+		return true
+	else 
+		return false
+		
+end function
+
+operator>= (const Date& t) const:boolean
+	compare the day, month and year from both Date object
+	if the Date object is more than or equal to the other Date object
+		return true
+	else 
+		return false
+		
+end function
+
+operator< (const Date& t) const:boolean
+	compare the day, month and year from both Date object
+	if the Date object is less than the other Date object
+		return true
+	else 
+		return false
+		
+end function
+
+
+operator> (const Date& t) const:boolean
+	compare the day, month and year from both Date object
+	if the Date object is more than the other Date object
+		return true
+	else 
+		return false
+		
+end function
+
+
+======================================================================
+
+
+Program class
+
+======================================================================
+printAverageWindSpeedAndAmbientAirTemperaturePerMonth(month, year) :void
+	
+	declare total WindSpeed to contain total wind speed per month
+	declare total ambient air temperature to contain total ambient air temperature per month
+	declare average wind speed to contain average wind speed per month
+	declare average ambient air temperature to contain average ambient air temperature per month
+	
+	set the format of decimal output to 1 decimal place
+	
+	if total wind speed and total ambient air temperature is more than 0
+		print out the name of the month and the year follow by the average wind speed and ambient air temperature
+	else if total wind speed and total ambient air temperature is equal to 0
+		print out the name of the month and the year and then output the string "No Data"
+	
+end function
+	
+printAverageWindSpeedAndAmbientAirTemperaturePerYear(int year) : void
+
+	output the year
+	set the output of decimal place to 1
+	
+	obtain the total wind speed for each month in a given year
+	obtain total ambient air temperature for each month in a given year
+	obtain average wind speed for each month in a given year
+	obtain ambient air temperature for each month in a given year
+	
+	compare if total wind speed and total ambient air temperature for each month in a given year is equal to 0.0
+		 output the name of the month then output "No Data" 
+	else if the total wind speed and total ambient air temperature for each month in a given year is more than 0.0
+		output the name of the month and then the average wind speed with "km/h" and average ambient air temperature with "degrees C"
+		
+	output two empty line
+	
+end function
+
+
+
+printTotalSolarRadiationPerYear(int year) :void
+	output the year value
+
+	set the output number precision to 1 decimal place
+
+	obtain the total solar radiation for each month in a year
+	
+	if the total solar radiation is equal to 0.0
+		output the name of the month then "No Data"
+	else if total solar radiation is more than 0.0
+		output the name of the month and then the total solar radiation "kWh/m^2"
+		
+	output two blank lines
+	
+end function
+
+printHighestSolarRadiation(date object):void
+
+	obtain highest solar radiation from a specific date
+	
+	output the date
+
+	output the result of the highest solar radiation for the given date
+
+	print out "Time:"
+	
+	print out all the timing that has the highest solar radiation for the given date
+	
+	output one blank line
+}
+
+execute():void
+
+	start populating data from csv files
+
+	declare an integer variable to hold user input
+
+	while userInput is not equal to 6
+	
+		display the main menu in text
+		
+		prompt user to key in the options
+	
+		accept user input for menu options	
+
+		
+		declare month and year integer variable;
+		declare string variable to hold the date from user input
+
+		if user input is equal to 1 
+			prompt user to key in month and year
+			system accepts data from user input
+			print out the average wind speed and ambient air temperature per month from given month and year
+		
+		else if user input is equal to 2
+			prompt user to key in the year
+			system accepts the year from user input
+			prints out the average wind speed and ambient air temperature for the year	
+		
+		else if user input is equal to 3
+			prompt user to key in the year
+			system accepts the year from user input
+			print out the total solar radiation per year
+
+
+		else if user input is equal to 4
+			prompt user to key in the year
+			system accepts the year from user input
+			output a csv file which contains average wind speed, average ambient air temperature and average solar radiation per month in a year
+
+		else if user input is equal to 5
+			
+			prompt user to key in the date in this format dd/mm/yyyy
+			system accepts the date from user input
+			
+			convert date string to istringstream 
+			use istringstream to insert data into date object using >> operator
+			
+			print out all the timing in the highest solar radiation using the given date object
+			
+		else if user input is equal to 6
+			
+			while loop breaks and end this program
+
+		else
+			print out error message prompt user to key in values between 1 to 6
+		
+
+end function
+
+==================================================================================
+
+Data class
+=================================================================================
+
+populateData():void
+
+	open "data/met_index.txt" using file stream
+
+	declare a string to hold filename
+	
+	iterate the filestream 
+		get the filename from the file 
+		append "data/" to the filename
+		insert appended filename to the list 
+		
+	close the file stream
+
+
+	declare an iterator for list to iterate the list that contain file name
+
+	declare list that contains Date object
+	declare list that contain WindLogType for all csv files
+	declare list that contain WindLogType for data in a particular year
+	
+	
+	iterate the list that contains filename
+		
+		use a file stream to open using a filename
+		ignore the first row of data in csv file
+		
+		prompt status of loading which csv file
+		
+		declare date object to store date object in csv file to prevent multiple insertion to binary tree
+		
+		a while loop in file stream
+			
+			get the entire row of data in csv file
+			
+			check whether the string for the data is empty 
+				convert the entire row of data from csv in string to istringstream
+				
+				insert the data into windlogtype object using >> operator
+				
+				do a comparison check whether the date is a new date 
+					insert date to binary search tree
+					use the date object to store this date so that we can check
+				
+				
+				insert the windlogtype to the list that contains data for all csv
+		
+				
+				prepare data collection for listed years in all csv
+				if the year stored in a variable for check purpose is different from the year in the current data
+					set the boolean to false
+					
+					loop the vector to check whether the year value exist in the vector
+					if not found
+						insert the new year value to the vector
+					
+					set the year variable that is used to check to new year value
+
+				
+			prompt a message if the loading of data for this csv file is completed
+	
+		close the file stream
+
+	prompt the message to tell user that system is processing the data in list data structure to sort them to map data structure
+
+	declare a list iterator for windlogtype object
+
+	
+	sort each data in list that contain data in all csv files to specific year
+	store these data sorted in specific year to map using year as key and list<windlogtype> as value
+	
+	prompt user that the data process for converting from list data structure to map data structure is completed
+	
+end function
+
+checkExistenceOfDataUsingMonthAndYear(int month, int year): boolean
+	loop for 31 days 
+		declare a date object to store the day, month, year
+		use the loop counter for the day in date object
+		
+		search the binary tree for the existence of this date object		
+		if found
+			return true
+			
+	return false
+}
+
+
+
+
+
+	

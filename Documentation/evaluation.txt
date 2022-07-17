@@ -1,0 +1,31 @@
+Evaluation
+==================================================================================
+
+This zip file has been checked for malware.
+
+Rationale for using data structure
+- BST is used to store date that exist in data retrieved from csv file 
+	- Purpose: Used to check whether the date existed in the BST
+- Map is used to store List<WindLogType> with int year as a key
+	- Purpose: To store List data structure in a specific year which reduce the amount of operation to search required data
+- List is used to WindLogType object for a specific year
+	- Purpose: To store all WindLogType with a specific year into a List data structure
+- Vector data structure has been used on date,time,utility class for easier implementation to iterate through the vector to retrieve required data
+
+Things that are not working
+- Catching exception errors are not implemented in this program
+- There are some data overlapping date inserted into the list for example 2014 data have 1 data with 2015 date
+  since the list are search and obtain using the criteria sorted by year and month this problem has been resolved
+  but these data that are overlapping will be ignored in this system
+
+
+
+Things that are working
+- Function calculating Average wind speed and average ambient air temperature for a specified month and year
+- Function calculating Average wind speed and average ambient air temperature in a specified year
+- Function calculating Total solar radiation in kWh/m^2 for each month of a specified year
+- Function Output data to a file with average wind speed (km/h), average ambient air temperature and total solar radiation in kWh/m^2 for each month of a specified year.
+- Display all timing with highest solar radiation in a specific date 
+- Uploading all csv stated in met_index.txt file to proper data structure
+- Storing data to specific classes object in WindLogType class during populating data to data structure
+

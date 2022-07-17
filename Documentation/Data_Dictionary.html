@@ -1,0 +1,1242 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>C++ Assignment Documentation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      body {
+        position: relative;
+        min-height: 75rem;
+        padding-top: 4.5rem;
+
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="navbar-top-fixed.css" rel="stylesheet">
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Documentation</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="btn btn-success active" role="button" aria-pressed="true" href="Data_Dictionary.html">Data Dictionary</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+<div class="container-fiuld">
+
+  <div class="accordion" id="accordionExample">
+
+    <!-- Program class -->
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Program class
+          </button>
+        </h2>
+      </div>
+
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+
+          <div class="container-fluid">
+            <table class="table">
+              <thead>
+                <tr>
+                  Purpose: This class was created to act as a medium to execute the main program
+                </tr>
+                <tr>
+                  <th scope="col">Class</th>
+                  <th scope="col">Method Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Return Type</th>
+                  <th scope="col">Protection</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Rationale</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Program</th>
+                  <td>m_util</td>
+                  <td>Utility</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>Utility object</td>
+                  <td>By invoking this object allows the usage of getting the full name of the month using integer and other method in Utility class</td>
+                </tr>
+                <tr>
+                  <th scope="row">Program</th>
+                  <td>m_data</td>
+                  <td>Data</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>Data object</td>
+                  <td>This object input and compute the data in csv files, by creating a class and hide the details of data manipulation</td>
+                </tr>
+                <tr>
+                  <th scope="row">Program</th>
+                  <td>Program()</td>
+                  <td>Constructor</td>
+                  <td>-</td>
+                  <td>Public</td>
+                  <td>Default Constructor for Program Class</td>
+                  <td>To create and initialize Program object if no specific value is given</td>
+                </tr>
+                <tr>
+                  <th scope="row">Program</th>
+                  <td>~Program()</td>
+                  <td>Destructor</td>
+                  <td>-</td>
+                  <td>Public</td>
+                  <td>Default destructor for Program Class</td>
+                  <td>Destroy the Program object</td>
+                </tr>
+                <tr>
+                  <th scope="row">Program</th>
+                  <td>displayMenu()</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>A method to display the menu for the program</td>
+                  <td>This method output the instruction to the user by putting all the cout function into one function allow the developer to use it easily in a while loop</td>
+                </tr>
+                <tr>
+                  <th scope="row">Program</th>
+                  <td>printAverageWindSpeedAndAmbientAirTemperaturePerMonth(int month, int year)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>A method to print out the month and the year follow by the average wind speed and ambient temperature for the month and year </td>
+                  <td>To manipulate the data by calling the methods in the Data object and then encapsulate into a function allowing simpler method calling in the while loop</td>
+                </tr>
+                <tr>
+                  <th scope="row">Program</th>
+                  <td>printAverageWindSpeedAndAmbientAirTemperaturePerYear(int year)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>A method to print out the data of wind speed and ambient air temperature for each month given the year</td>
+                  <td>To manipulate the data by calling the methods in the Data object and then encapsulate into a function allowing simpler method calling in the while loop</td>
+                </tr>
+                <tr>
+                  <th scope="row">Program</th>
+                  <td>printTotalSolarRadiationPerYear(int year)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>A method to display the menu for the program</td>
+                  <td>To manipulate the data by calling the methods in the Data object and then encapsulate into a function allowing simpler method calling in the while loop</td>
+                </tr>
+                <tr>
+                  <th scope="row">Program</th>
+                  <td>execute()</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>A method which acts a main program</td>
+                  <td>By placing this method in this class, allows easier time to execute the program simply by creating a program object in the main function and invoke the execute method(). The main purpose is to hide the details of executing the program into a method.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End of Program class -->
+
+    <!-- Data Class -->
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Data Class
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+
+          <div class="container-fluid">
+            <table class="table">
+              <thead>
+                <tr>
+                  Purpose: To separate the process of manipulating data in csv file by grouping up all common functions involving IO, storing data into Vector data structure, data manipulation in the m_windLogTypeVector vector into a class so that developers could easily call these methods for specific usage. This allows developer to extend the functionality of this class should the requirement changes
+                </tr>
+                  <th scope="col">Class</th>
+                  <th scope="col">Method Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Return Type</th>
+                  <th scope="col">Protection</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Rationale</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>m_infile</td>
+                  <td>ifstream</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>input file stream</td>
+                  <td>input file stream to accept file data since this class is created to handle all IO request</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>m_ofile</td>
+                  <td>ofstream</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>output file stream</td>
+                  <td>An output file stream to output the data to a file, this member is needed for output data to files from m_windLogTypeVector vector storing WindLogType object</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>m_windLogType</td>
+                  <td>WindLogType</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>WindLogType object which contains date, time and solar radiation</td>
+                  <td>This object holds the required data format to store data from csv file</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>m_util</td>
+                  <td>Utility</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>Utility class which contains the commonly used methods</td>
+                  <td>This object contains the commonly used methods allowing more flexibility to use without rewriting the logic again</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>m_windLogTypeVector</td>
+                  <td>Vector&lt;WindLogType&gt;</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>Vector to contain WindLogType object after the object has been populated from the csv data</td>
+                  <td>This vector is used to store WindLogType object which contains the data from csv file</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>Data()</td>
+                  <td>Constructor</td>
+                  <td>-</td>
+                  <td>public</td>
+                  <td>Constructor for Data class</td>
+                  <td>To create Data object</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>~Data()</td>
+                  <td>Destructor</td>
+                  <td>-</td>
+                  <td>public</td>
+                  <td>Destructor for Data class</td>
+                  <td>To destroy Data object</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>populateData(string fileName)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>A method to populate the m_windLogType vector from csv data</td>
+                  <td>To simplify the process of using methods by encapsulate all complex details into a method, developer would simply enter file name of the csv file to start populating data into the program</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>calculateTotalWindSpeedPerMonth(int month, int year)</td>
+                  <td>method</td>
+                  <td>float</td>
+                  <td>public</td>
+                  <td>A method to calculate the total wind speed given the month and the year</td>
+                  <td>To simplify the process of using methods by encapsulate all complex details into a method, developer would simply retrieve the value from this method to compute more complex operation</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>calculateTotalAmbientAirTemperaturePerMonth(int month, int year)</td>
+                  <td>method</td>
+                  <td>float</td>
+                  <td>public</td>
+                  <td>A method to calculate the total ambient temperature given the month and the year</td>
+                  <td>To simplify the process of using methods by encapsulate all complex details into a method, developer would simply retrieve the value from this method to compute more complex operation</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>calculateTotalSolarRadiationPerMonth(int month, int year)</td>
+                  <td>method</td>
+                  <td>float</td>
+                  <td>public</td>
+                  <td>A method to calculate the total solar radiation given the month and the year</td>
+                  <td>To simplify the process of using methods by encapsulate all complex details into a method, developer would simply retrieve the value from this method to compute more complex operation</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>calculateSumOfWindSpeedRecordPerMonth(int month, int year)</td>
+                  <td>method</td>
+                  <td>int</td>
+                  <td>public</td>
+                  <td>A method to calculate the number of record for wind speed given the month and the year</td>
+                  <td>To simplify the process of using methods by encapsulate all complex details into a method, developer would simply retrieve the value from this method to compute more complex operation</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>calculateSumOfAmbientAirTemperatureRecordPerMonth(int month, int year)</td>
+                  <td>method</td>
+                  <td>int</td>
+                  <td>public</td>
+                  <td>A method to calculate the number of record for ambient temperature given the month and the year</td>
+                  <td>To simplify the process of using methods by encapsulate all complex details into a method, developer would simply retrieve the value from this method to compute more complex operation</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>calculateSumOfSolarRadiationRecordPerMonth(int month, int year)</td>
+                  <td>method</td>
+                  <td>int</td>
+                  <td>public</td>
+                  <td>A method to calculate the number of record for solar radiation given the month and the year</td>
+                  <td>To simplify the process of using methods by encapsulate all complex details into a method, developer would simply retrieve the value from this method to compute more complex operation</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>calculateAverageWindSpeedPerMonth(int month, int year)</td>
+                  <td>method</td>
+                  <td>float</td>
+                  <td>public</td>
+                  <td>A method to calculate the average wind speed given the month and the year</td>
+                  <td>To simplify the process of using methods by encapsulate all complex details into a method, developer would simply retrieve the value from this method to compute more complex operation</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>calculateAverageAmbientAirTemperaturePerMonth(int month, int year)</td>
+                  <td>method</td>
+                  <td>float</td>
+                  <td>public</td>
+                  <td>A method to calculate the average ambient air temperature given the month and the year</td>
+                  <td>To simplify the process of using methods by encapsulate all complex details into a method, developer would simply retrieve the value from this method to compute more complex operation</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>calculateAverageSolarRadiationPerMonth(int month, int year)</td>
+                  <td>method</td>
+                  <td>float</td>
+                  <td>public</td>
+                  <td>A method to calculate the average solar radiation given the month and the year</td>
+                  <td>To simplify the process of using methods by encapsulate all complex details into a method, developer would simply retrieve the value from this method to compute more complex operation</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>calculateAverageWindSpeedPerYear(int year)</td>
+                  <td>method</td>
+                  <td>float</td>
+                  <td>public</td>
+                  <td>A method to calculate the average wind speed given the year</td>
+                  <td>To simplify the process of using methods by encapsulate all complex details into a method, developer would simply retrieve the value from this method to compute more complex operation</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>calculateAverageAmbientAirTemperaturePerYear(int year)</td>
+                  <td>method</td>
+                  <td>float</td>
+                  <td>public</td>
+                  <td>A method to calculate the average ambient air temperature given the year</td>
+                  <td>To simplify the process of using methods by encapsulate all complex details into a method, developer would simply retrieve the value from this method to compute more complex operation</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>calculateTotalSolarRadiationPerYear(int year)</td>
+                  <td>method</td>
+                  <td>float</td>
+                  <td>public</td>
+                  <td>A method to calculate the total solar radiation given the year</td>
+                  <td>To simplify the process of using methods by encapsulate all complex details into a method, developer would simply retrieve the value from this method to compute more complex operation</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data</th>
+                  <td>outputDataToFile(int year, string fileName)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>A method that output the year, wind speed, ambient air temperature and solar radiation given the year using the given filename</td>
+                  <td>To encapsulate complex details for output to a file into a method that can be invoke by specifying only the year and filename. This allows ease of usage in the Program class execute method. Outside of this scope, developers could reuse this method for other usage.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End Of Data Class -->
+
+    <!-- Date Class -->
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Date Class
+          </button>
+        </h2>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body">
+
+          <div class="container-fluid">
+            <table class="table">
+              <thead>
+                <tr>
+                  Purpose: This class was created to store date in csv data file
+                </tr>
+                <tr>
+                  <th scope="col">Class</th>
+                  <th scope="col">Method Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Return Type</th>
+                  <th scope="col">Protection</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Rationale</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Date</th>
+                  <td>m_day</td>
+                  <td>int</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>integer variable to hold data for day in the date data</td>
+                  <td>To hold the numeric data for day in the date</td>
+                </tr>
+                <tr>
+                  <th scope="row">Date</th>
+                  <td>m_month</td>
+                  <td>int</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>integer variable to hold data for month in the date data</td>
+                  <td>To hold the numeric data for month in the date</td>
+                </tr>
+                <tr>
+                  <th scope="row">Date</th>
+                  <td>m_year</td>
+                  <td>int</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>integer variable to hold data for year in the date data</td>
+                  <td>To hold the numeric data for year in the date</td>
+                </tr>
+                <tr>
+                  <th scope="row">Date</th>
+                  <td>Date()</td>
+                  <td>Constructor</td>
+                  <td>-</td>
+                  <td>Public</td>
+                  <td>Default Constructor for Data Class</td>
+                  <td>To create Date object</td>
+                </tr>
+                <tr>
+                  <th scope="row">Date</th>
+                  <td>~Date()</td>
+                  <td>Destructor</td>
+                  <td>-</td>
+                  <td>Public</td>
+                  <td>Default destructor for Date Class</td>
+                  <td>Destroy the Program object</td>
+                </tr>
+                <tr>
+                  <th scope="row">Date</th>
+                  <td>GetDay()</td>
+                  <td>method</td>
+                  <td>int</td>
+                  <td>public</td>
+                  <td>A method to get the numeric digit for day of the date</td>
+                  <td>This method was designed as a public method to access the internal variable for Date class</td>
+                </tr>
+                <tr>
+                  <th scope="row">Date</th>
+                  <td>GetMonth()</td>
+                  <td>method</td>
+                  <td>int</td>
+                  <td>public</td>
+                  <td>A method to get the numeric digit for month of the date</td>
+                  <td>This method was designed as a public method to access the internal variable for Date class</td>
+                </tr>
+                <tr>
+                  <th scope="row">Date</th>
+                  <td>GetYear()</td>
+                  <td>method</td>
+                  <td>int</td>
+                  <td>public</td>
+                  <td>A method to get the numeric digit for year of the date</td>
+                  <td>This method was designed as a public method to access the internal variable for Date class</td>
+                </tr>
+                <tr>
+                  <th scope="row">Date</th>
+                  <td>SetDay(int newDay)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>A method to set the numeric digit for day of the date</td>
+                  <td>This method was designed as a public method to change the value of the internal variable for Date class</td>
+                </tr>
+                <tr>
+                  <th scope="row">Date</th>
+                  <td>SetMonth(int newMonth)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>A method to set the numeric digit for month of the date</td>
+                  <td>This method was designed as a public method to change the value of the internal variable for Date class</td>
+                </tr>
+                <tr>
+                  <th scope="row">Date</th>
+                  <td>SetYear(int newYear)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>A method to set the numeric digit for year of the date</td>
+                  <td>This method was designed as a public method to change the value of the internal variable for Date class</td>
+                </tr>
+                <tr>
+                  <th scope="row">Date</th>
+                  <td>SetYear(int newYear)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>A method to set the numeric digit for year of the date</td>
+                  <td>This method was designed as a public method to change the value of the internal variable for Date class</td>
+                </tr>
+                <tr>
+                  <th scope="row">Date</th>
+                  <td>Operator &gt;&gt;</td>
+                  <td>Overloaded Operator</td>
+                  <td>istream</td>
+                  <td></td>
+                  <td>Overloaded operator &gt;&gt; for Date Class</td>
+                  <td>Overloaded the &gt;&gt; operator to insert data into the date class</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End of Date Class -->
+
+    <!--Time class -->
+    <div class="card">
+      <div class="card-header" id="headingFour">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Time Class
+          </button>
+        </h2>
+      </div>
+      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+        <div class="card-body">
+
+          <div class="container-fluid">
+            <table class="table">
+              <thead>
+                <tr>
+                  Purpose: This class was created to hold time data
+                </tr>
+                <tr>
+                  <th scope="col">Class</th>
+                  <th scope="col">Method Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Return Type</th>
+                  <th scope="col">Protection</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Rationale</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Time</th>
+                  <td>m_hours</td>
+                  <td>int</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>A member in Time class holding the numeric data of hour</td>
+                  <td>This member is designed to hold the numeric data of hour from the time data in the csv</td>
+                </tr>
+                <tr>
+                  <th scope="row">Time</th>
+                  <td>m_minutes</td>
+                  <td>int</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>A member in Time class holding the numeric data of minutes</td>
+                  <td>This member is designed to hold the numeric data of minutes from the time data in the csv</td>
+                </tr>
+                <tr>
+                  <th scope="row">Time</th>
+                  <td>Time()</td>
+                  <td>Constructor</td>
+                  <td>-</td>
+                  <td>Public</td>
+                  <td>Default Constructor for Time Class</td>
+                  <td>To create Time object</td>
+                </tr>
+                <tr>
+                  <th scope="row">Time</th>
+                  <td>Time(int hours, int minutes)</td>
+                  <td>Constructor</td>
+                  <td>-</td>
+                  <td>Public</td>
+                  <td>Destructor for Time Class</td>
+                  <td>To allow members in the Time class to be initialize through this constructor</td>
+                </tr>
+                <tr>
+                  <th scope="row">Time</th>
+                  <td>~Time()</td>
+                  <td>method</td>
+                  <td>-</td>
+                  <td>public</td>
+                  <td>Default destructor for Time class</td>
+                  <td>Destroy Time object</td>
+                </tr>
+                <tr>
+                  <th scope="row">Time</th>
+                  <td>GetHours()</td>
+                  <td>method</td>
+                  <td>int</td>
+                  <td>public</td>
+                  <td>A method to access the internal member for m_hour in Time class </td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Time</th>
+                  <td>GetMinutes()</td>
+                  <td>method</td>
+                  <td>int</td>
+                  <td>public</td>
+                  <td>A method to access the internal member for m_minutes in Time class </td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Time</th>
+                  <td>SetMinutes(int minutes)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>A method to change the value of the internal member for m_minutes in Time class </td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Time</th>
+                  <td>SetHours(int hours)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>A method to change the value of the internal member for m_hours in Time class </td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Time</th>
+                  <td>Operator &gt;&gt;</td>
+                  <td>Overloaded operator</td>
+                  <td>istream</td>
+                  <td></td>
+                  <td>Overloaded operator in Time class </td>
+                  <td>To cater alternative method to input data into Time class</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End of time class -->
+
+    <!--Utility class -->
+    <div class="card">
+      <div class="card-header" id="headingFive">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Utility Class
+          </button>
+        </h2>
+      </div>
+      <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+        <div class="card-body">
+
+          <div class="container-fluid">
+            <table class="table">
+              <thead>
+                <tr>
+                  Purpose: This class was created to hold commonly used methods that can be shared among different classes and use whenever necessary
+                </tr>
+                <tr>
+                  <th scope="col">Class</th>
+                  <th scope="col">Method Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Return Type</th>
+                  <th scope="col">Protection</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Rationale</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Utility</th>
+                  <td>Utility()</td>
+                  <td>Constructor</td>
+                  <td>-</td>
+                  <td>public</td>
+                  <td>Default constructor for Utility class</td>
+                  <td>To create an Utility object</td>
+                </tr>
+                <tr>
+                  <th scope="row">Utility</th>
+                  <td>~Utility()</td>
+                  <td>Destructor</td>
+                  <td>-</td>
+                  <td>public</td>
+                  <td>A destructor for Utility class</td>
+                  <td>To destroy the Utility object</td>
+                </tr>
+                <tr>
+                  <th scope="row">Utility</th>
+                  <td>GetDataFromARow(string data, string delimiter, string::size_type position)</td>
+                  <td>method</td>
+                  <td>string</td>
+                  <td>public</td>
+                  <td>Given the data which contains the whole row of data from csv file, user of this function need to specify the delimiter and the position of the data delimited in the csv</td>
+                  <td>To create a standard way to obtain data from csv</td>
+                </tr>
+                <tr>
+                  <th scope="row">Utility</th>
+                  <td>GetMonthInString(int month)</td>
+                  <td>method</td>
+                  <td>string</td>
+                  <td>public</td>
+                  <td>to get the string value of the month using the numeric of the month as an input</td>
+                  <td>To create a method which can be reused and without creating redundant code</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- end of utility class -->
+
+    <!-- Vector class -->
+    <div class="card">
+      <div class="card-header" id="headingSix">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            Vector Class
+          </button>
+        </h2>
+      </div>
+      <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+        <div class="card-body">
+
+          <div class="container-fluid">
+            <table class="table">
+              <thead>
+                <tr>
+                  Purpose: This class was created to act like a dynamic array to hold any data type
+                </tr>
+                <tr>
+                  <th scope="col">Class</th>
+                  <th scope="col">Method Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Return Type</th>
+                  <th scope="col">Protection</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Rationale</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Vector</th>
+                  <td>m_list</td>
+                  <td>T*</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>A member in Vector class holding the array using pointer</td>
+                  <td>This member is designed to hold the array using pointer which acts like a dynamic array</td>
+                </tr>
+                <tr>
+                  <th scope="row">Vector</th>
+                  <td>m_start</td>
+                  <td>T*</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>A member in Vector class holding the starting position in the array using pointer</td>
+                  <td>This member is designed to hold the starting position in the array using pointer</td>
+                </tr>
+                <tr>
+                  <th scope="row">Vector</th>
+                  <td>m_end</td>
+                  <td>T*</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>A member in Vector class holding the ending position in the array using pointer</td>
+                  <td>This member is designed to hold the ending position in the array using pointer</td>
+                </tr>
+                <tr>
+                  <th scope="row">Vector</th>
+                  <td>m_count</td>
+                  <td>int</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>A member in Vector class holding total number of element in the array </td>
+                  <td>This member is designed to hold total number of element in the array</td>
+                </tr>
+                <tr>
+                  <th scope="row">Vector</th>
+                  <td>m_capacity</td>
+                  <td>int</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>A member in Vector class holding maximum number of element in the dynamic array</td>
+                  <td>This member is designed to hold maximum number of element in the dynamic array </td>
+                </tr>
+                <tr>
+                  <th scope="row">Vector</th>
+                  <td>Vector()</td>
+                  <td>Constructor</td>
+                  <td>-</td>
+                  <td>Public</td>
+                  <td>Default Constructor for Vector Class</td>
+                  <td>To create Vector object</td>
+                </tr>
+                <tr>
+                  <th scope="row">Vector</th>
+                  <td>~Vector()</td>
+                  <td>Destructor</td>
+                  <td>-</td>
+                  <td>Public</td>
+                  <td>Destructor for Time Class</td>
+                  <td>To destroy the Vector object</td>
+                </tr>
+                <tr>
+                  <th scope="row">Vector</th>
+                  <td>at(int position)</td>
+                  <td>method</td>
+                  <td>T&</td>
+                  <td>public</td>
+                  <td>A method which return the data at the specified position in the array</td>
+                  <td>To have a method to return the reference of the m_list pointer at the specified position so that developer can retrieve the data within the Vector</td>
+                </tr>
+                <tr>
+                  <th scope="row">Vector</th>
+                  <td>push_back(const T& elem)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>A method to insert a generic datatype data into the Vector</td>
+                  <td>To have a method to insert a generic datatype data into the vector</td>
+                </tr>
+                <tr>
+                  <th scope="row">Vector</th>
+                  <td>getCount()</td>
+                  <td>method</td>
+                  <td>int</td>
+                  <td>public</td>
+                  <td>A method to get the number of element exist in Vector object</td>
+                  <td>To have a method to find the number of existing element in the vector and this member can be used to check whether the vector needs to be resize</td>
+                </tr>
+                <tr>
+                  <th scope="row">Vector</th>
+                  <td>getCapacity()</td>
+                  <td>method</td>
+                  <td>int</td>
+                  <td>public</td>
+                  <td>A method to get the maximum number of element in Vector object </td>
+                  <td>To have a method to obtain the maximum number of element in Vector object which can be used to determine whether this vector needs to be rezize</td>
+                </tr>
+                <tr>
+                  <th scope="row">Vector</th>
+                  <td>isFull()</td>
+                  <td>method</td>
+                  <td>bool</td>
+                  <td>public</td>
+                  <td>A method to check whether this Vector object is full </td>
+                  <td>To create a way to verify whether this Vector object is full to prevent error when inserting data into Vector</td>
+                </tr>
+                <tr>
+                  <th scope="row">Vector</th>
+                  <td>resize(int newSize)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>Resize the Vector according to the specified size</td>
+                  <td>To cater for changes to limit of the Vector size allowing this Vector class to act like a dynamic array which can change its size according to its needs</td>
+                </tr>
+                <tr>
+                  <th scope="row">Vector</th>
+                  <td>create(int size)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>Create the Vector using the specified size</td>
+                  <td>To create a Vector based on the given size for constructor</td>
+                </tr>
+                <tr>
+                  <th scope="row">Vector</th>
+                  <td>clear()</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>Clear all pointer and initialize the counter for number of existing element and maximum number of element in the Vector to 0</td>
+                  <td>To use this method for destructor</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- end of vector class -->
+
+    <!-- Weather class -->
+    <div class="card">
+      <div class="card-header" id="headingSeven">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+            Weather class
+          </button>
+        </h2>
+      </div>
+      <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+        <div class="card-body">
+
+          <div class="container-fluid">
+            <table class="table">
+              <thead>
+                <tr>
+                  Purpose: This class was created to hold data related to solar radiation, wind speed and ambient air temperature
+                </tr>
+                <tr>
+                  <th scope="col">Class</th>
+                  <th scope="col">Method Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Return Type</th>
+                  <th scope="col">Protection</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Rationale</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Weather</th>
+                  <td>m_wind_speed</td>
+                  <td>float</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>A member in Weather class holding the value of wind speed</td>
+                  <td>This member is designed to hold the value of wind speed in the Weather class</td>
+                </tr>
+                <tr>
+                  <th scope="row">Weather</th>
+                  <td>m_solar_radiation</td>
+                  <td>float</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>A member in Weather class holding the value of solar radiation</td>
+                  <td>This member is designed to hold the value of solar radiation</td>
+                </tr>
+                <tr>
+                  <th scope="row">Weather</th>
+                  <td>m_temperature</td>
+                  <td>float</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>A member in Weather class holding the value of air ambient temperature</td>
+                  <td>This member is designed to hold the value of air ambient temperature in the Weather class</td>
+                </tr>
+                <tr>
+                  <th scope="row">Weather</th>
+                  <td>Weather()</td>
+                  <td>Constructor</td>
+                  <td>-</td>
+                  <td>public</td>
+                  <td>Default constructor in Weather class</td>
+                  <td>To create Weather object</td>
+                </tr>
+                <tr>
+                  <th scope="row">Weather</th>
+                  <td>~Weather()</td>
+                  <td>Destructor</td>
+                  <td>-</td>
+                  <td>public</td>
+                  <td>Destructor for Weather class</td>
+                  <td>To destroy the Weather object</td>
+                </tr>
+                <tr>
+                  <th scope="row">Weather</th>
+                  <td>SetWindSpeed(float newWindSpeed)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>To set m_wind_speed in Weather class</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Weather</th>
+                  <td>GetWindSpeed()</td>
+                  <td>method</td>
+                  <td>float</td>
+                  <td>public</td>
+                  <td>To get m_wind_speed in Weather class</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Weather</th>
+                  <td>SetSolarRadiation(float newSolarRadiation)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>To set m_solar_radiation in Weather class</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Weather</th>
+                  <td>GetSolarRadiation()</td>
+                  <td>method</td>
+                  <td>float</td>
+                  <td>public</td>
+                  <td>To get m_solar_radiation in Weather class</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Weather</th>
+                  <td>SetTemperature(float newTemperature)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>To set m_temperature in Weather class</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Weather</th>
+                  <td>GetTemperature()</td>
+                  <td>method</td>
+                  <td>float</td>
+                  <td>public</td>
+                  <td>To get m_temperature in Weather class</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Weather</th>
+                  <td>Operator &gt;&gt;</td>
+                  <td>Overloaded operator</td>
+                  <td>istream</td>
+                  <td></td>
+                  <td>Overloaded operator to modify how ifstream can access this operator</td>
+                  <td>Using this overloaded operator to insert data into this class</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End of weather class -->
+
+
+    <div class="card">
+      <div class="card-header" id="headingEight">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+            WindLogType class
+          </button>
+        </h2>
+      </div>
+      <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+        <div class="card-body">
+
+
+          <div class="container-fluid">
+            <table class="table">
+              <thead>
+                <tr>
+                  Purpose: This class was created to hold data related to solar radiation, wind speed and ambient air temperature
+                </tr>
+                <tr>
+                  <th scope="col">Class</th>
+                  <th scope="col">Method Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Return Type</th>
+                  <th scope="col">Protection</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Rationale</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">WindLogType</th>
+                  <td>m_date</td>
+                  <td>Date</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>A member in WindLogType class holding the object of Date class</td>
+                  <td>To hold data related to Date from csv file</td>
+                </tr>
+                <tr>
+                  <th scope="row">WindLogType</th>
+                  <td>m_time</td>
+                  <td>Time</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>A member in WindLogType class holding the object of Time class</td>
+                  <td>To hold data related to Time from csv file</td>
+                </tr>
+                <tr>
+                  <th scope="row">WindLogType</th>
+                  <td>m_weather</td>
+                  <td>Weather</td>
+                  <td>-</td>
+                  <td>private</td>
+                  <td>A member in WindLogType class holding the object of Weather class</td>
+                  <td>To hold data related to Weather from csv file</td>
+                </tr>
+                <tr>
+                  <th scope="row">WindLogType</th>
+                  <td>WindLogType()</td>
+                  <td>Constructor</td>
+                  <td>-</td>
+                  <td>public</td>
+                  <td>Default constructor in WindLogType class</td>
+                  <td>To create WindLogType object</td>
+                </tr>
+                <tr>
+                  <th scope="row">WindLogType</th>
+                  <td>~WindLogType()</td>
+                  <td>Destructor</td>
+                  <td>-</td>
+                  <td>public</td>
+                  <td>Destructor for WindLogType class</td>
+                  <td>To destroy the WindLogType object</td>
+                </tr>
+                <tr>
+                  <th scope="row">WindLogType</th>
+                  <td>SetDate(Date newDate)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>Mutator for m_date</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">WindLogType</th>
+                  <td>GetDate()</td>
+                  <td>method</td>
+                  <td>Date</td>
+                  <td>public</td>
+                  <td>Accessor for m_date</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">WindLogType</th>
+                  <td>SetTime(Time newTime)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>Mutator for m_time</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">WindLogType</th>
+                  <td>GetTime()</td>
+                  <td>method</td>
+                  <td>Time</td>
+                  <td>public</td>
+                  <td>Accessor for m_time</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">WindLogType</th>
+                  <td>SetWeather(Weather newWeather)</td>
+                  <td>method</td>
+                  <td>void</td>
+                  <td>public</td>
+                  <td>Mutator for m_weather</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">WindLogType</th>
+                  <td>GetWeather()</td>
+                  <td>method</td>
+                  <td>Weather</td>
+                  <td>public</td>
+                  <td>Accessor for m_weather</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">WindLogType</th>
+                  <td>Operator &gt;&gt;</td>
+                  <td>Overloaded operator</td>
+                  <td>istream</td>
+                  <td></td>
+                  <td>Overloaded operator to insert the data into WindLogType</td>
+                  <td>Since the Date, Time and Weather class have overloaded operator, this operator is used to transfer data through ifstream into WindLogType's member</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+</body>
+</html>
